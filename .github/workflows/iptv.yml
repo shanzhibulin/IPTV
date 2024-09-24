@@ -28,7 +28,6 @@ jobs:
       - name: Install dependencies
         run: |
             pip install -r requirements.txt
-
       - name: Get Currrent Date
         run: echo "DATE=$(date +'%Y-%m-%d %H:%M:%S %Z')" >> $GITHUB_ENV
 
@@ -46,7 +45,6 @@ jobs:
           else
             echo "Last deployment time: $DATE" >> README.md
           fi
-
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
